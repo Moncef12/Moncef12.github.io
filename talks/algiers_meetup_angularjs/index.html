@@ -1,0 +1,459 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>AngularJS - Concepts & meilleures pratiques</title>
+
+		<meta name="description" content="anglarJS in depth + useful tricks">
+		<meta name="author" content="Moncef Hassein-bey">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/beige.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<section>
+							<h3>
+                                Concepts de Bases et les meilleures pratiques.
+							</h3>
+						<p>
+							<img src="img/angular_logo.png" alt="" height="200" width="200" style="border: none"/>
+						</p>
+						<p>
+							<small>Par <a href="http://www.github.com/Moncef12">Moncef Hassein-bey</a> / <a href="http://twitter.com/moncef_hbey">@moncef_hbey</a></small>
+						</p>
+						<p>
+							<small style="font-size: 18px; font-style: italic"> Développeur Web @Service Factory </small>
+						</p>
+						<p>
+							<small>  Algiers Developer Meetup, 3 octobre 2015</small>
+						</p>
+
+					</section>
+					<section>
+					</section>
+				</section>
+
+				<section>
+					<section>
+
+						<h2> Agenda : </h2>
+                        <h3>Partie I : Concepts de bases + concepts avancés</h3>
+                        <ul>
+                            <li> Two ways data binding</li>
+                            <li> controllers </li>
+                            <li> Injection de dépendances.</li>
+							<li>Directives</li>
+							<li> Directives personalisées</li>
+							<li> Services</li>
+							<li> Filtres</li>
+                            <li> Modules</li>
+                            <li> Routage </li>
+							<li> Unit testing : service, controller, directives, providers.</li>
+							<li>Evenements</li>
+							<li> Le contexte AngularJS </li>
+                        </ul>
+					</section>
+
+					<section>
+                        <h3>
+                            Partie II : Meilleures pratiques :
+                        </h3>
+                        <ul>
+                            <li>SRP.</li>
+                            <li>1 type per file.</li>
+                            <li>IIFE.</li>
+							<li>Nommage.</li>
+							<li>Controllers.</li>
+							<li>Services.</li>
+							<li>Directives.</li>
+							<li>Structures d'un projet angularJS.</li>
+							<li>Modules.</li>
+							<li>Modularité.</li>
+							<li>DI annotations.</li>
+							<li>Strict-di mode</li>
+							<li> Réduire les watchers : utilisation du (::) + partage des objets à la places des primitives.</li>
+                        </ul>
+					</section>
+				</section>
+
+				<section>
+					<h1>Partie I :</h1>
+					<ul>
+						<li><h2>Survol sur les concepts de bases.</h2></li>
+						<li><h2>Quelques concepts avancés.</h2></li>
+					</ul>
+				</section>
+
+				<section>
+					<section>
+						<h2> Two ways data binding</h2>
+						<img src="img/two_ways_data_binding.jpg" alt=""/>
+					</section>
+					<section>
+						<img src="img/two-way-db.png" alt=""/>
+					</section>
+					<section data-transition="zoom">
+						<img src="img/two_ways_data_binding_explained.png" height="100%" width="100%" alt=""/>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2> Controlleur </h2>
+						<ul>
+							<li>Fonction constructeur.</li>
+							<li>$scope comme paramètre.</li>
+							<li>Pas le même controlleur que sur MVC backend.</li>
+							<li>ngController pour attacher en vue.</li>
+						</ul>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						Injection de dépendences (DI)
+						<img src="img/angualr_DI.jpg" alt=""/>
+					</section>
+					<section>
+						<h2> Injection implicite </h2>
+					</section>
+					<section>
+						<h2> Injection avec un tableau d'annotations. </h2>
+					</section>
+					<section>
+						<h2> Injection avec la propriété $inject.</h2>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Directives</h2>
+						<ul>
+							<li>Marqueur de DOM : elements, attributs, commentaires</li>
+							<li>$compile</li>
+							<li>
+								Directives qui font partie de AngularJS
+								<ul>
+									<li>ngRepeat</li>
+									<li>ng-model</li>
+									<li>ngSrc</li>
+									<li>ngOptions</li>
+									<li>ngBind</li>
+									<li>ngClass</li>
+									<li> ...</li>
+								</ul>
+							</li>
+						</ul>
+					</section>
+				</section>
+
+				<section>
+						<h2>Directive personalisées</h2>
+					<img src="img/directive_definition.png" alt=""/>	
+					
+				</section>
+
+				<section>
+					<h2>Services</h2>
+					<ul>
+						<li>service, factory sont des singletons</li>
+						<li>angular.service</li>
+						<li>angular.factory</li>
+					</ul>
+					<pre><code>
+function factory(name, factoryFn) {
+  return provider(name, { $get: factoryFn });
+}
+
+function service(name, constructor) {
+  return factory(name, ['$injector', function($injector) {
+    return $injector.instantiate(constructor);
+  }]);
+}
+					</code></pre>
+				</section>
+
+
+				<section>
+					<h2>Filtres</h2>
+					<ul>
+						<li>Formate la valeur d'une expression pour l'affichage.</li>
+						<li>Utilsable en vue, controlleurs, services, directives.</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Module</h2>
+					<ul>
+						<li>Conteneur, namespacing, ...</li>
+						<li>Setter : angular.module('myModule', ['myDependeciens'])</li>
+						<li>Getter : angular.module('myModule')</li>
+					</ul>
+				</section>
+				
+				
+				<section>
+					<section>
+						<aside class="notes">
+							Prendre du temps pour expliquer l'importance des tests.
+							<ul>
+								<li>Confiance</li>
+								<li>Réduire le cout des bugs</li>
+								<li>Code testé</li>
+								<li>Favorise le refactoring</li>
+							</ul>
+						</aside>
+						<h2>Test unitaire pour AngularJS</h2>
+						<img src="img/cowboy.png" alt=""/>
+					</section>
+					<section>
+						<img src="img/angular_karma_jasmine.png" alt=""/>
+						<p>Url : http://karma-runner.github.io/0.13/intro/installation.html</p>
+					</section>
+					<section>
+						<h2>Test du controlleur</h2>
+					</section>
+					<section>
+						<h2>Test du service</h2>
+					</section>
+					<section>
+						<h2>Test du directive</h2>
+					</section>
+					<section>
+						<h2>Test du provider</h2>
+						<pre><code>
+angular.provider('myServiceProvider', function(){
+
+  var myService = {};
+
+  this.config = function(options){
+    myService.options = options;
+  }
+
+  this.$get = function(){
+    return myService;
+  }
+})
+
+describe('myServiceProvider', function(){
+
+  var _myServiceProvider;
+  // inject module
+
+  // utilise fake config module .config
+  angular.module('fakeModule').config(function(myServiceProvider){
+    _myServiceProvider = myServiceProvider;
+  })
+
+  it('shoud return options', function(){
+    expect(_myServiceProvider.config).toBeDefined();
+    expect(_myServiceProvider.$get().options).toBeDefined();
+  })
+})
+						</code></pre>
+					</section>
+					<section>
+						<h2>Couverture du test</h2>
+						<img src="img/istanbuljs.png" alt="" height="400" width="450"/>
+						<img src="img/karma_coverage.png" alt="" height="400" width="450"/>
+						<p>Url : http://karma-runner.github.io/0.8/config/coverage.html</p>
+					</section>
+				</section>
+
+				<section>
+					<h2>Les tests end-to-end (e2e)</h2>
+					<img src="img/protractor.png" alt=""/>
+				</section>
+				<section>
+					<h2>Routage</h2>
+					<ul>
+						<li>ngRoute.</li>
+						<li>ngView.</li>
+						<li>$routeProvider.</li>
+						<li>$route & $routeParams.</li>
+						<li>ui-router.</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Evenements</h2>
+					<ul>
+						<li>$scope.$emit(name, args)</li>
+						<li>$scope.$broadcast(name, args)</li>
+						<li>$scope.$on(name, fn)</li>
+					</ul>
+				</section>
+
+				<section>
+					<section>
+						<h2>Le contexte d'angularJS</h2>
+						<ul>
+							<li>Cycle de digestion</li>
+							<li>Liste de $watch</li>
+							<li>$apply et $digest</li>
+						</ul>
+					</section>
+					<section>
+						<img src="img/angular_build_ngContext.png" alt=""/>
+					</section>
+				</section>
+
+				<section>
+					<h1>Partie II : meilleures pratiques.</h1>
+				</section>
+
+				<section>
+					<h2>SRP (alias: Single Responsibility Principe)</h2>
+				</section>
+
+				<section>
+					<h2> 1 type par fichier.</h2>
+				</section>
+
+				<section>
+					<h2> IIFE</h2>
+					<p>Immediately Invoked Function Expression</p>
+					<img height="500" src="img/iife.png" alt=""/>
+				</section>
+
+				<section>
+					<h2> Nommage </h2>
+					<ul>
+						<li>Structure du nom des fichiers  et composant.</li>
+						<li>Nommage par fonctionalitée.</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>DI annotations</h2>
+					<ul>
+						<li>Annotations via $inject</li>
+						<li>ng-annotate (@ngInject)</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Strict-di mode</h2>
+				</section>
+
+				<section>
+					<h2> Structures des projects AngularJS </h2>
+					<img src="img/structure_projet.png" alt=""/>
+				</section>
+
+				<section>
+					<h2>module</h2>
+				</section>
+
+				<section>
+					<h2> Modularité </h2>
+					<ul>
+						<li>Des petits modules conteneurs.</li>
+						<li>Un module par fonctionalitée.</li>
+						<li>Beaucoup de fichier par module, un signe pour créer un autre.</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2> Controllers </h2>
+					<ul>
+						<li>controllerAS</li>
+						<li>activate() ou init()</li>
+						<li>Implémentation en bas, API en haut</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2> Services </h2>
+				</section>
+
+				<section>
+					<h2> Directives </h2>
+				</section>
+
+				<section>
+					<h2>
+						Réduire les watchers :
+					</h2>
+					<ul>
+						<li>Une fois binding (::)</li>
+						<li>Partage des objects.</li>
+					</ul>
+				</section>
+				<section style="text-align: left;">
+					<h1>Merci !</h1>
+					<img src="img/keep-calm-and-code-angular.png" alt="" height="300" width="300"/>
+					<p>
+						<small>
+							<a href="https://github.com/hakimel/reveal.js">@moncef_hbey</a>
+						</small>
+					</p>
+					<p>
+						 <a href="http://slides.com">github.com/Moncef12/ng-demo-talk</a><br>
+					</p>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
