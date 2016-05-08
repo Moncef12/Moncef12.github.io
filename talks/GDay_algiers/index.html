@@ -1,0 +1,425 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>AngularJS, and what's new ?</title>
+
+		<meta name="description" content="anglarJS and what'is new">
+		<meta name="author" content="Moncef Hassein-bey">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/moon.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<style>
+			.reveal .footer {
+				position: absolute;
+				bottom: 1em;
+				left: 1em;
+				font-size: 0.5em;
+			}
+		</style>
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+			<div class='footer'>
+				<p>
+					<a href="http://twitter.com/moncef_hbey">
+						<img src="img/twitter.png" alt="twitter" style="border: none;  background-color: transparent;" height="20px" width="20px">/moncef_hbey
+					</a>
+				</p>
+			</div>
+
+
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<section>
+						<h3>
+							What's AngularJS and what's new ?
+						</h3>
+						<p>
+							<img src="img/angular.jpg" alt="" height="200" width="300" style="border: none"/>
+						</p>
+						<p>
+							<small>
+								By <a href="http://www.github.com/Moncef12">Moncef Hassein-bey</a>
+							</small>
+						<p>
+							<small style="font-size: 18px; font-style: italic"> Web Developer / Founder @YatouBiz </small>
+						</p>
+						<p>
+							<small>
+								<a href="http://twitter.com/moncef_hbey">
+									<img src="img/twitter.png" alt="twitter" style="border: none; margin: 4px 0; background-color: transparent;" height="20px" width="20px">/moncef_hbey
+								</a>
+							</small>
+						</p>
+						</p>
+						<p>
+							<small>  Google Day Algiers, 7 May 2016</small>
+						</p>
+
+					</section>
+				</section>
+
+
+				<section>
+					<section>
+						<h4>Brief History</h4>
+						<p>
+							From the server to the client, and then both (isomorphic) !
+						</p>
+					</section>
+
+					<section>
+						<p>
+							Server-side rendering
+						</p>
+						<ul>
+							<li>State change is done by server.</li>
+							<li>Page reload each time.</li>
+							<li>Poor user experience (UX).</li>
+							<li>Fast initial load page.</li>
+							<li>Good for SEO.</li>
+						</ul>
+						<img src="img/eccp_poste_dz.jpg" alt="ccp poste">
+					</section>
+					<section>
+						<p>
+							From server to client : Single page applications (SPA)
+						</p>
+							<ul>
+								<li>State change is done by client.</li>
+								<li>No page reload.</li>
+								<li>Rich UX.</li>
+								<li>Slow initial load page.</li>
+								<li>Bad for SEO.</li>
+							</ul>
+						<div class="box"  id="one">
+							<img src="img/gmail.jpg" alt="gmail">
+						</div>
+					</section>
+                    <section>
+                        <p>The rise of javascript frameworks</p>
+                        <img src="img/backbonejs.png" alt="" style="float: left; margin-left: 2px; border: none" height="220px" width="220px">
+                        <img src="img/ember.png" alt="" style="float: left; margin-left: 2px; border: none" height="220px" width="220px">
+                        <img src="img/angular_logo.png" height="220px" width="220px" alt="" style="float: left; margin-left: 2px; border: none">
+                        <img src="img/reactjs.png" alt="" height="220px" width="220px" style="float: left; margin-left: 2px; border: none">
+						<img src="img/polymer.png" alt="" height="220px" width="220px" style="float: left; margin-left: 2px; border: none">
+						<img src="img/canjs.png" alt="" height="220px" width="220px" style="float: left; margin-left: 2px; border: none">
+						<img src="img/knockoutjs1.png" alt="" height="220px" width="220px" style="float: left; margin-left: 2px; border: none">
+						<img src="img/aurelia-logo.png" alt="" height="220px" width="220px" style="float: left; margin-left: 2px; border: none">
+                    </section>
+					<section>
+						<p>
+							You said both !
+						</p>
+						<p>
+							<small>
+								To be continued ...
+							</small>
+						</p>
+					</section>
+				</section>
+
+
+
+
+
+				<section>
+					<img src="img/angular_logo.png" style="border:none;" alt="angular" height="400px" width="400px">
+					<p>HTML enhanced for the web apps</p>
+				</section>
+				<section>
+					<section>
+						<p>
+							Angular for mobile
+						</p>
+						<p>
+							<small>
+								Ionic : Advanced HTML5 Hybrid Mobile App Framework
+							</small>
+						</p>
+						<img src="img/angular_ionic.png" width="450" height="200" alt="ionic_angular">
+					</section>
+					<section>
+						<a style="display: block; font-size: 22px" href="#">http://showcase.ionicframework.com/</a>
+						<img src="img/app_ionic_showcases.png" alt="ionic_showcases">
+					</section>
+				</section>
+
+				<section>
+					<p>
+						Write Angular 1 apps, for Angular 2.
+					</p>
+					<a href="https://github.com/johnpapa/angular-styleguide/tree/master/a1">Style guide : https://github.com/johnpapa/angular-styleguide/tree/master/a1</a>
+				</section>
+
+				<section>
+					<h3>What's new ?</h3>
+					<ul>
+						<li>Angular 1.5</li>
+						<li>Angular 2 !</li>
+					</ul>
+				</section>
+
+				<section>
+					<section>
+						<h3>
+							Angular 1.5
+						</h3>
+						<ul>
+							<li> Angular.component()</li>
+							<li> Lifecycle Hooks. </li>
+						</ul>
+					</section>
+				</section>
+
+				<section>
+					<img src="img/angular_2.png" alt="angular 2" style="border:0;background-color: transparent">
+					<p>
+						Angular 2
+					</p>
+				</section>
+
+				<section>
+					<section>
+						<img src="img/fast_angular2.gif" alt="fast angular2">
+						<p>
+							Angular 2 is now really ! really ! fast !
+						</p>
+						<ul>
+							<li>Change detection.</li>
+							<li>Web workers.</li>
+							<li>Immutable Objects & observable</li>
+							<li>Server-side rendering.</li>
+						</ul>
+					</section>
+					<section>
+						<p>
+							Change detection
+						</p>
+						<ul>
+							<li>3-10 faster.</li>
+							<li>More speed with : immutables and observables.</li>
+						</ul>
+						<img src="img/angular1-vs-angular2.jpg" alt="change detection">
+					</section>
+
+					<section>
+						<p>
+							Web Workers
+						</p>
+						<p>
+							UI Thread (App) <----> Another Thread (framework)
+						</p>
+					</section>
+
+					<section>
+						<p>
+							Immutable Objects and Observables
+						</p>
+						<ul>
+							<li>Immutable.js (facebook/ReactJS)</li>
+							<li>RxJS (Microsoft)</li>
+						</ul>
+					</section>
+
+				</section>
+
+				<section>
+					<p>
+						Angular Universal
+					</p>
+					<p><small>Angular now run on both server and client (isomorphic).</small></p>
+					<div>
+						<a href="#"><small>universal.angular.io</small></a>
+					</div>
+					<img src="img/angular_universal.png" alt="universal" height="200" width="220" style="border: 0">
+					<div>
+						<ul>
+							<li>Fast initial load page.</li>
+							<li>Optimized for Search Engine.</li>
+							<li>Site Preview : facebook, twitter, ... </li>
+						</ul>
+					</div>
+				</section>
+
+				<section>
+					<section>
+						<p>
+							Cross Platform
+						</p>
+						<img src="img/cross_plateform.png" alt="cross_plateform" style="border:none; background-color: transparent">
+					</section>
+					<section>
+						<p>Progressive web apps</p>
+						<img src="img/progressive_web_apps.png" alt="progressive web apps" style="border: none;background-color: transparent">
+						<div>
+
+							<a href="mobile.angular.io">mobile.angular.io</a>
+						</div>
+					</section>
+					<section>
+						<p>Native apps</p>
+						<img src="img/NativeScript_Angular_logo.png" alt="nativescript and angular" style="border: none; background-color: transparent" height="300" width="272">
+						<img src="img/react_native.svg" alt="nativescript and angular" style="border: none; background-color: transparent" height="300" width="272">
+						<img src="img/ionic_2.png" alt="nativescript and angular" style="border: none; background-color: transparent" height="300" width="272">
+					</section>
+					<section>
+						<p>Desktop apps</p>
+						<img src="img/angular2-electron-logo.png" alt="angular eletron" style="border: none; background-color: transparent" height="300" width="272">
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<p>
+							TypeScript : superset of javascript (es6/7 + Types)
+						</p>
+						<img src="img/typescript.jpg" alt="typescript" width="600px" height="350px">
+					</section>
+					<section>
+						<ul>
+							<li>Compile from TS => Javascript : ES5, ES6.</li>
+							<li>Plain javascript in runtime.</li>
+							<li>Predictable data flow.</li>
+							<li>Features from the future, es6, es7, and even es8 !</li>
+							<li>For IDEs : Enable the power for code completion, instant errors, code refactoring, go to definition.</li>
+						</ul>
+					</section>
+					<section>
+						<p>Exemple 1: </p>
+<pre><code>
+function foo() {
+	// Some operations.
+}
+
+// Error, Here foo is a function,
+// This will always gives false !!!
+// This error will never be detected in plain javasript.
+// => Using TypeScript will highlight an error just bellow foo
+if(foo > 50){
+    SendVeryImportantEmail();
+}
+
+</code></pre>
+						<p>Exemple 2 :</p>
+<pre><code>
+var height = parseInt(document.getElementById('someElementID'));
+
+if(height > 100){ // false always !
+	hideElement();
+}
+</code></pre>
+					</section>
+				</section>
+
+
+				<section>
+					<p>
+						Angular cli
+					</p>
+					<img src="img/angular_cli.png" alt="angular_cli" style="border: none; background-color: transparent" width="390" height="180">
+					<img src="img/nghelp.png" alt="ng_help" height="300">
+				</section>
+
+				<section>
+					<p>
+						Angular 2 size now !
+					</p>
+					<img src="img/angular2_size" alt="angular size now">
+				</section>
+
+				<section>
+					<p>
+						Official Style Guide
+					</p>
+					<img src="img/official_style_guide" alt="angular 2 style guide">
+					<a href="#"></a>
+					<a href="#">See also : https://github.com/mgechev/codelyzer</a>
+				</section>
+
+				<section>
+					<p>
+						Augury : angular 2 debugger tool. (as a chrome extension)
+					</p>
+					<img src="img/augury" alt="augury">
+					<div><a href="#">augury.angular.io</a></div>
+				</section>
+
+
+				<section>
+					<p>
+						Upgrade : Go form Angular 1, to angular 2.
+					</p>
+					<a href="#">https://angular.io/docs/ts/latest/guide/upgrade.html</a>
+				</section>
+
+				<section>
+					<h2>
+						Thank you !
+					</h2>
+				</section>
+
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
